@@ -26,18 +26,22 @@ from server.utils.singleton import Singleton
 logger = logging.getLogger(__name__)
 
 
-class CommonConfig(object):
+class ServerConfig(object):
     """
     | **@author:** Umesh Kumar
     | Common Configuration
     """
 
     @typechecked
-    def __init__(self, common_config: dict):
+    def __init__(self, server_config: dict):
         try:
-            self.HOST = common_config['host']
-            self.PORT = common_config['port']
-            self.DEBUG = common_config['debug']
+            self.FLASK_HOST = server_config['flask_host']
+            self.FLASK_DEBUG = server_config['flask_debug']
+            self.RESTPLUS_SWAGGER_UI_DOC_EXPANSION = server_config['restplus_swagger_ui']
+            self.RESTPLUS_VALIDATE = server_config['restplus_validate']
+            self.RESTPLUS_MASK_SWAGGER = server_config['restplus_swagger']
+            self.RESTPLUS_ERROR_404_HELP = server_config['restplus_error']
+            self.FLASK_PORT = server_config['flask_port']
         except KeyError as ke:
             raise Exception('Key Error. Config Error', ke)
 
@@ -60,7 +64,7 @@ class ConfigManager(metaclass=Singleton):
             raise Exception(
                 'Configuration file path error. Please provide configuration file path: ' + config_file_path, e)
         try:
-            self.CommonConfig = CommonConfig(SAMPLE_CONFIG_DATA['common_config'])
+            self.ServerConfig = ServerConfig(SAMPLE_CONFIG_DATA['server_config'])
         except KeyError as ke:
             raise Exception('Key not found. ', ke)
 

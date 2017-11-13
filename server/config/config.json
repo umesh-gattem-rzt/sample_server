@@ -1,7 +1,11 @@
 {
-  "common_config": {
-    "debug": true,
-    "port": 5000,
-    "host": "0.0.0.0"
+  "server_config": {
+    "flask_host": "localhost",
+    "flask_port": 8066,
+    "flask_debug": false,
+    "restplus_swagger_ui": "list",
+    "restplus_validate": true,
+    "restplus_swagger": false,
+    "restplus_error": false
   }
 }
