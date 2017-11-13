@@ -8,7 +8,7 @@ from flask import Flask, Blueprint
 path = "/".join(os.getcwd().split('/')[:-1])
 sys.path.append(path)
 from server import SAMPLE_CONFIG
-from server.api.restplus import api
+from server.sample_extension_server.api import api
 
 app = Flask(__name__)
 
@@ -43,5 +43,4 @@ def main():
 
 
 if __name__ == "__main__":
-    from server.api.sample_extension import *
     main()

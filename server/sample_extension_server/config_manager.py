@@ -18,10 +18,10 @@ import logging
 import os
 from collections import OrderedDict
 
+from server.utils.singleton import Singleton
 from typeguard import typechecked
 
-from server.logging_config_manager import setup_logging
-from server.utils.singleton import Singleton
+from server.sample_extension_server.logging_config_manager import setup_logging
 
 logger = logging.getLogger(__name__)
 

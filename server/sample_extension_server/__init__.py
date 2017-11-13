@@ -11,7 +11,7 @@
 """
 
 import os
-from server.logging_config_manager import setup_logging
-from server.config_manager import SAMPLE_CONFIG
+
+from server.sample_extension_server.logging_config_manager import setup_logging
 
 setup_logging(default_path=os.path.join("/".join(__file__.split('/')[:-1]), 'config', 'logging.yaml'))

@@ -11,7 +11,7 @@
 """
 import logging
 
-from server.app import app
+from server.sample_extension_server.app import app
 
 logger = logging.getLogger(__name__)
 

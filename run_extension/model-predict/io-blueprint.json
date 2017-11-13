@@ -1,0 +1,94 @@
+{
+  "mode": [
+    "standalone"
+  ],
+  "entityCodeHook": [
+    {
+      "url": "extension/model-designer/designer/model/get_model_code_params/",
+      "type": "POST",
+      "key": "#component",
+      "requestObject": "{inputparams}"
+    }
+  ],
+  "inputparams": [
+    {
+      "name": "model-name",
+      "internalName": "Model Name",
+      "type": "STRING",
+      "defaultValue": "",
+      "optional": false
+    },
+    {
+      "name": "run-params",
+      "internalName": "RunParams",
+      "type": "MAP",
+      "defaultValue": "",
+      "optional": false,
+      "properties": [
+        {
+          "name": "layer_name",
+          "internalName": "Layer name",
+          "type": "STRING",
+          "defaultValue": "",
+          "optional": false
+        },
+        {
+          "name": "data",
+          "internalName": "Data",
+          "type": "DICTIONARY",
+          "defaultValue": "",
+          "optional": false
+        },
+        {
+          "name": "batches",
+          "internalName": "No of batches",
+          "type": "INTEGER",
+          "defaultValue": 1,
+          "optional": true
+        },
+        {
+          "name": "batch_size",
+          "internalName": "Batch size",
+          "type": "INTEGER",
+          "defaultValue": 0,
+          "optional": true
+        }
+      ]
+    },
+    {
+      "name": "file-params",
+      "internalName": "file-params",
+      "type": "MAP",
+      "defaultValue": "",
+      "optional": false,
+      "properties": [
+        {
+          "name": "file_name",
+          "internalName": "File Name",
+          "type": "STRING",
+          "defaultValue": "",
+          "optional": false
+        },
+        {
+          "name": "split_ratio",
+          "internalName": "Split ratio",
+          "type": "LIST",
+          "defaultValue": [
+            100,
+            0,
+            0
+          ],
+          "optional": true
+        },
+        {
+          "name": "delimiter",
+          "internalName": "Delimiter",
+          "type": "STRING",
+          "defaultValue": ",",
+          "optional": true
+        }
+      ]
+    }
+  ],
+  "outputparams": []
+}

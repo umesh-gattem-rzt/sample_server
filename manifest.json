@@ -1,0 +1,8 @@
+{
+  "name": "model-inference",
+  "version":"0.1",
+  "description":"To design model inference",
+  "author": "Umesh Kumar",
+  "type":"expert-ai-tool",
+  "permissions":"Not defined yet (Future ref)"
+}

@@ -1,0 +1,7 @@
+{
+  "implemented_language": "python",
+  "project_bundle": "code",
+  "starter_file": "sample_extension_server/app.py",
+  "starter_script": "run_script.sh",
+  "author": "Umesh Kumar"
+}

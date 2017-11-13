@@ -1,0 +1,91 @@
+{
+  "standalone": {
+    "form": {
+      "inputparams": [
+        {
+          "name": "model_name",
+          "label": "Model name",
+          "dataType" : "String",
+          "defaultValue" : "Jarvis",
+          "mandatory": true,
+          "renderType": "dropDown",
+          "possibleValues": ["Thor", "Jarvis", "Hulk"],
+          "order": 1,
+            "validations": [
+            {
+              "type": "regex",
+              "pattern": "/w+"
+            }
+          ]
+        },
+        {
+          "name": "hyper_params",
+          "label" : "Hyper Parameters",
+          "renderType" : "accordion",
+          "order" : 2,
+          "properties" : [
+            {
+              "name" : "epoch",
+              "label" : "Epoch",
+              "dataType" : "Number",
+              "defaultValue" : 10,
+              "mandatory" : true,
+              "renderType" : "text",
+              "order": 1
+            },
+            {
+              "name" : "learning_rate",
+              "label" : "Learning Rate",
+              "dataType" : "Number",
+              "defaultValue" : 0.01,
+              "mandatory" : true,
+              "renderType" : "text",
+              "order": 2
+            }
+          ]
+        },
+        {
+          "name": "file_params",
+          "label" : "File Parameters",
+          "renderType" : "accordion",
+          "order" : 3,
+          "properties" : [
+            {
+              "name" : "file_name",
+              "label" : "File Name",
+              "dataType" : "String",
+              "defaultValue" : "",
+              "mandatory" : true,
+              "renderType" : "text",
+              "order": 1
+            },
+            {
+              "name" : "split_ratio",
+              "label" : "Split Ratio",
+              "dataType" : "Array",
+              "defaultValue" : [60,0,40],
+              "mandatory" : true,
+              "renderType" : "text",
+              "order": 2
+            }
+          ]
+        }
+
+    ],
+
+    "outputparams": [
+      {
+              "name" : "output_file",
+              "internalName" : "outputFile",
+              "label" : "Output File",
+              "dataType" : "String",
+              "defaultValue" : "/output.csv",
+              "mandatory" : true,
+              "renderType" : "text",
+              "order": 1
+            }
+
+    ]
+  }
+}
+}

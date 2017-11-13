@@ -1,0 +1,7 @@
+{
+	"name":"model-inference",
+	"blueprint":"io-blueprint.json",
+	"view":"ui-view.json",
+	"template":"code-template.py",
+	"mode":["standalone","pipeline","notebook"]
+}
